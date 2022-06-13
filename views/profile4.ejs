@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            padding: 27px;
+            font-size: 21px;
+            text-align: center;
+        }
+        
+        li {
+            margin: auto;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <!--TO INCLUDE PARTIAL VIEW IN OUR PROFILE VIEW. WE JUST NEED 2 BRACKETS <,% BELOW IS THE COMMAND FOR INCLUDING PARTIAL VIEW.-->
+    <%- include('partial_views/nav.ejs') %>
+        <!-- We provide path for partial views required file.-->
+        <h1>Profile:-
+            <%= person %>
+        </h1>
+        <h1>Age:-
+            <%= moredata.age %>
+        </h1>
+        <h1>Job:-
+            <%= moredata.job %>
+        </h1>
+        <h2>Friends</h2>
+        <ul>
+            <% moredata.friends.forEach((item) =>{ %>
+                <li>
+                    <%= item %>
+                </li>
+                <% }) %>
+        </ul>
+</body>
+
+</html>

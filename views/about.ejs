@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <!-- <style>
+        body {
+            background-color: aliceblue;
+            padding: 27px;
+            font-size: 21px;
+            text-align: center;
+        }
+    </style>
+    //WE HAVE ADDED STYLE.CSS AS A SEPARATE FILE IN ASSETS. BUT WE NEED TO LINK THAT IN THIS FILE.
+    -->
+</head>
+
+<body>
+    <%- include('partial_views/nav.ejs') %>
+        <h1>This is about.ejs HTML page.</h1>
+        <!-- <p>
+            COMMENTED OUT BELOW CODE FOR CHANGING IT.
+                BELOW CODE IS FOR USE OF QUERY STRING IN DIRECTLY PRINTING NAME AND JOB .
+            <%= qs.job %>
+                <!-written for nodejs25.js
+                    above we give the value of object we want in output.
+                The above is for job feature.-->
+        <!--  </p>
+        <p>
+            <%= qs.name %>
+                <!-
+                    written for nodejs25.js
+                    above we give the value of object we want in output.
+                The above is for job feature.-->
+        <!-- </p>-->
+        <!--BELOW USING QUERY STRINGS WITH FORMS
+         WE IMPLEMENT QUERY STRING TO GIVE IT FEATURES OF AUTOMATICALLY TAKING NAME AND JOB FROM QUERY SET.-->
+        <!-- <form action="">
+            <label for="who">Name</label>
+            <input type="text" name="who" id="who" value='<%=qs.name %>'>
+            <!-ABOVE QUERY STRING HELPS IN PUTTING NAME DIRECTLY IN THE FORM 
+            IF WE MAKE CHANGES IN QUERY STRING THEN THESE NAMES AND JOB ALSO CHANGES.-->
+        <!-- <label for="job">Job</label>
+            <input type="text" name="job" id="job" value='<%=qs.job %>'>
+            <!-ABOVE QUERY STRING HELPS IN PUTTING JOB DIRECTLY IN THE FORM -->
+        <!-- <label for="email">Email</label>
+            <input type="text" name="email" id="email" value=''>
+            <button type='submit'>Submit</button>
+        </form> -->
+        <!-- For the post request in express js.-->
+        <form action="/about" method="POST">
+            <label for="who">Name</label>
+            <input type="text" name="who" id="who" value=''>
+            <!--ABOVE QUERY STRING HELPS IN PUTTING NAME DIRECTLY IN THE FORM 
+            IF WE MAKE CHANGES IN QUERY STRING THEN THESE NAMES AND JOB ALSO CHANGES.-->
+            <label for="job">Job</label>
+            <input type="text" name="job" id="job" value=''>
+            <!--ABOVE QUERY STRING HELPS IN PUTTING JOB DIRECTLY IN THE FORM -->
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" value=''>
+            <button type='submit'>Submit</button>
+        </form>
+</body>
+
+</html>
